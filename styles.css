@@ -3,3 +3,23 @@
 
 /* Encabezado compacto de arquitectura, sin título promocional */
 .architecture-heading{justify-content:flex-start;margin-bottom:24px}.architecture-heading>p{max-width:680px;margin:0;color:#aeb7a8}
+
+
+/* Navegación multipágina: cada enlace abre una pantalla independiente. */
+body.servicios-page .hero, body.servicios-page .metrics, body.servicios-page #horarios, body.servicios-page #planes, body.servicios-page #como-funciona, body.servicios-page .cta-section { display:none !important; }
+body.horarios-page .hero, body.horarios-page .metrics, body.horarios-page #servicios, body.horarios-page #planes, body.horarios-page #como-funciona, body.horarios-page .cta-section { display:none !important; }
+body.suscripciones-page .hero, body.suscripciones-page .metrics, body.suscripciones-page #servicios, body.suscripciones-page #horarios, body.suscripciones-page #como-funciona, body.suscripciones-page .cta-section { display:none !important; }
+body.servicios-page main, body.horarios-page main, body.suscripciones-page main { padding-top: 22px; }
+body.servicios-page #servicios, body.horarios-page #horarios, body.suscripciones-page #planes { display:block; min-height:65vh; }
+
+/* Refinamiento multipágina */
+.page-intro{padding:62px 8.3% 34px;background:#20271f;color:#f5f7ef;position:relative;overflow:hidden}
+.page-intro:after{content:"GF";position:absolute;right:9%;top:18px;font-family:var(--display);font-weight:800;font-size:clamp(100px,18vw,230px);letter-spacing:-.1em;color:#ffffff08;pointer-events:none}
+.page-intro h1{font-family:var(--display);font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.065em;margin:20px 0 16px;position:relative;z-index:1}
+.page-intro h1 em{font-style:normal;color:var(--lime)}
+.page-intro p{max-width:540px;color:#b8c0b1;font-size:13px;line-height:1.8;position:relative;z-index:1}
+.page-breadcrumb{display:flex;gap:10px;align-items:center;margin-top:25px;font-size:10px;color:#8f9988}
+.page-breadcrumb a{color:var(--lime);text-decoration:none}
+#mainNav a[aria-current="page"]{color:#718f37}
+body.servicios-page #servicios,body.horarios-page #horarios,body.suscripciones-page #planes{padding-top:45px}
+@media(max-width:760px){.page-intro{padding:48px 7% 28px}.page-intro h1{font-size:52px}.page-intro p{font-size:12px}}

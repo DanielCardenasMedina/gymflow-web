@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma web demostrativa para la gestión integral de un gimnasio." />
+  <title>Suscripciones | GYMFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="suscripciones-page">
+  <div class="announcement"><span class="pulse"></span> PLATAFORMA DEMOSTRATIVA · GESTIÓN INTEGRAL DEL GIMNASIO</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="GYMFlow inicio"><span class="brand-mark">G</span><span>GYM<span class="brand-light">FLOW</span><small>GESTIÓN INTELIGENTE</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="servicios.html">Servicios</a><a href="horarios.html">Horarios</a><a href="suscripciones.html" aria-current="page">Suscripciones</a>
+    </nav>
+    <div class="header-actions"><button class="btn btn-ghost" id="adminToggle">Panel admin ↗</button><a class="btn btn-primary" href="suscripciones.html">Ver planes <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> ELIGE TU PLAN</div><h1>Invierte en<br><em>tu bienestar.</em></h1><p>Compara las opciones de suscripción y registra tu interés. Los precios son referenciales y no se realizan cobros reales.</p><div class="page-breadcrumb"><a href="index.html">Inicio</a><span>/</span><strong>Suscripciones</strong></div></section>
+    <section class="hero" id="inicio">
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> TU GIMNASIO, MÁS ORGANIZADO</div>
+        <h1>Entrena mejor.<br><em>Gestiona fácil.</em></h1>
+        <p>Una sola plataforma para descubrir clases, revisar horarios, elegir tu suscripción y mantener todo bajo control.</p>
+        <div class="hero-actions"><a class="btn btn-primary btn-large" href="servicios.html">Explorar clases <span>↗</span></a><a class="text-link" href="#como-funciona">Conoce cómo funciona <span>↓</span></a></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>J</span><span>M</span><span>A</span></div><div><strong>Todo en un solo lugar</strong><small>Clientes · Clases · Suscripciones · Pagos</small></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image" role="img" aria-label="Persona entrenando en un gimnasio"></div>
+        <div class="floating-card card-top"><span class="float-icon lime">↗</span><div><small>GESTIÓN CENTRALIZADA</small><strong>Todo conectado</strong></div></div>
+        <div class="floating-card card-bottom"><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><small>EXPERIENCIA DIGITAL</small><strong>Simple y organizada</strong></div></div>
+        <div class="hero-stamp"><span>GYM</span><strong>FLOW</strong><small>MOVE WITH PURPOSE</small></div>
+      </div>
+      <div class="hero-bottom-label"><span>01 / 04</span><span>GESTIÓN INTEGRAL · EXPERIENCIA DIGITAL</span><span>↓ SCROLL</span></div>
+    </section>
+
+    <section class="metrics" aria-label="Módulos principales">
+      <div><span class="metric-number">01</span><strong>Clientes</strong><small>Registro organizado</small></div>
+      <div><span class="metric-number">02</span><strong>Clases y horarios</strong><small>Oferta centralizada</small></div>
+      <div><span class="metric-number">03</span><strong>Suscripciones</strong><small>Control de vigencia</small></div>
+      <div><span class="metric-number">04</span><strong>Pagos</strong><small>Flujo electrónico propuesto</small></div>
+    </section>
+
+    <section class="section section-light" id="servicios">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> DESCUBRE TU SIGUIENTE RETO</div><h2>Encuentra tu<br><em>forma de moverte.</em></h2></div><p>Consulta las especialidades y clases disponibles. Los nombres y horarios mostrados son ejemplos para probar la interfaz; deberán confirmarse con el gimnasio.</p></div>
+      <div class="filter-row"><div class="filter-tabs" id="classFilters"><button class="filter active" data-filter="Todas">Todas las clases</button><button class="filter" data-filter="Fuerza">Fuerza</button><button class="filter" data-filter="Cardio">Cardio</button><button class="filter" data-filter="Bienestar">Bienestar</button></div><label class="search-box"><span>⌕</span><input id="classSearch" type="search" placeholder="Buscar clase..." aria-label="Buscar clase"></label></div>
+      <div class="class-grid" id="classGrid"></div>
+      <div class="center-action"><button class="btn btn-dark" id="showAllClasses">Ver todas las clases <span>↗</span></button></div>
+    </section>
+
+    <section class="schedule-section" id="horarios">
+      <div class="section-heading schedule-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ORGANIZA TU SEMANA</div><h2>Tu tiempo.<br><em>Tu ritmo.</em></h2></div><p>Una vista rápida de los horarios de ejemplo. La administración podrá mantener esta programación actualizada.</p></div>
+      <div class="schedule-wrap"><div class="schedule-top"><div><span class="schedule-dot"></span> HORARIO SEMANAL</div><span class="demo-label">DATOS DE DEMOSTRACIÓN</span></div><div class="schedule-table" id="scheduleTable"></div></div>
+    </section>
+
+    <section class="section section-light plans-section" id="planes">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> SUSCRIPCIONES FLEXIBLES</div><h2>Elige tu plan.<br><em>Empieza hoy.</em></h2></div><p>El proyecto contempla cuatro periodos de suscripción. Los importes que aparecen a continuación son referenciales y editables; no están definidos en los documentos.</p></div>
+      <div class="plan-grid" id="planGrid"></div>
+      <p class="fine-print">* Precios ilustrativos para la demostración. No se realiza ningún cobro real.</p>
+    </section>
+
+    <section class="process-section" id="como-funciona"><div class="process-copy"><div class="eyebrow"><span class="eyebrow-line"></span> ASÍ FUNCIONA</div><h2>Menos vueltas.<br><em>Más claridad.</em></h2><p>El sistema reúne los pasos principales de la experiencia del cliente en una ruta clara y ordenada.</p><a href="suscripciones.html" class="btn btn-primary">Elegir suscripción <span>↗</span></a></div><div class="process-steps"><div class="process-step"><span>01</span><div><strong>Explora los servicios</strong><p>Consulta especialidades, clases, horarios y tarifas disponibles.</p></div><b>↗</b></div><div class="process-step"><span>02</span><div><strong>Selecciona tu suscripción</strong><p>Elige el periodo que se adapte a tus necesidades.</p></div><b>↗</b></div><div class="process-step"><span>03</span><div><strong>Registra tu inscripción</strong><p>Asocia tu cuenta con la clase que deseas realizar.</p></div><b>↗</b></div><div class="process-step"><span>04</span><div><strong>Confirma el pago</strong><p>En una implementación real, la pasarela informaría el resultado de la transacción.</p></div><b>↗</b></div></div></section>
+
+<section class="cta-section"><div class="cta-orbit orbit-one"></div><div class="cta-orbit orbit-two"></div><div class="cta-content"><div class="eyebrow"><span class="eyebrow-line"></span> TU PRÓXIMO PASO EMPIEZA AQUÍ</div><h2>Tu objetivo merece<br><em>un buen comienzo.</em></h2><p>Explora los planes y encuentra una opción para iniciar tu recorrido.</p><a href="suscripciones.html" class="btn btn-primary btn-large">Explorar suscripciones <span>↗</span></a></div><div class="cta-mark">GF<span>✳</span></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">G</span><span>GYM<span class="brand-light">FLOW</span><small>GESTIÓN INTELIGENTE</small></span></a><p>Proyecto académico · Arquitectura de Tecnologías de la Información</p><a href="index.html">Inicio ↑</a></footer>
+
+  <div class="admin-overlay" id="adminOverlay" aria-hidden="true"><aside class="admin-panel"><div class="admin-header"><div><span class="eyebrow dark-eyebrow">ÁREA ADMINISTRATIVA</span><h2>Panel de control</h2><p>Vista demostrativa para administrar la información del gimnasio.</p></div><button class="close-admin" id="closeAdmin" aria-label="Cerrar panel">×</button></div><div class="admin-stats" id="adminStats"></div><div class="admin-tabs"><button class="admin-tab active" data-admin-tab="classes">Clases</button><button class="admin-tab" data-admin-tab="registrations">Inscripciones</button><button class="admin-tab" data-admin-tab="payments">Pagos</button></div><div id="adminContent"></div><div class="admin-warning">Demo local: los cambios se guardan en este navegador. No hay usuarios reales, servidor ni pagos conectados.</div></aside></div>
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> GYMFLOW</div><h2 id="modalTitle">Únete al gimnasio</h2><p id="modalDescription">Completa los datos para registrar una solicitud de demostración.</p><form id="signupForm"><input type="hidden" id="selectedItem" name="selectedItem"><input type="hidden" id="selectedType" name="selectedType"><label>Nombre completo<input name="name" required minlength="2" placeholder="Ej. Alex Torres"></label><label>Correo electrónico<input name="email" type="email" required placeholder="alex@correo.com"></label><label>Teléfono (opcional)<input name="phone" type="tel" placeholder="999 999 999"></label><label id="classSelectLabel">Clase de interés<select name="className" id="classSelect"><option value="">Selecciona una clase</option></select></label><button class="btn btn-primary btn-large full-width" type="submit" id="formSubmit">Registrar solicitud <span>↗</span></button><p class="form-note">Demostración académica: no se procesarán datos ni pagos en un servidor.</p></form></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
