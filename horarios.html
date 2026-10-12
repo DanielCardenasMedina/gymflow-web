@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma web demostrativa para la gestión integral de un gimnasio." />
+  <title>GYMFlow | Gestión integral del gimnasio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> PLATAFORMA DEMOSTRATIVA · GESTIÓN INTEGRAL DEL GIMNASIO</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="GYMFlow inicio"><span class="brand-mark">G</span><span>GYM<span class="brand-light">FLOW</span><small>GESTIÓN INTELIGENTE</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="servicios.html">Servicios</a><a class="active-nav" aria-current="page" href="horarios.html">Horarios</a><a href="suscripciones.html">Suscripciones</a>
+    </nav>
+    <div class="header-actions"><button class="btn btn-ghost" id="adminToggle">Panel admin ↗</button><a class="btn btn-primary" href="suscripciones.html">Ver planes <span>↗</span></a></div>
+  </header>
+
+  <main class="subpage-main"><section class="subpage-intro"><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span>PLANIFICA TU SEMANA</div><h1>Tu horario. A tu manera.</h1><p>Consulta la programación semanal de ejemplo y organiza tus entrenamientos con anticipación.</p><div class="breadcrumbs"><a href="index.html">Inicio</a><span>/</span><strong>Horarios</strong></div></section><section class="schedule-section" id="horarios">
+      <div class="section-heading schedule-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ORGANIZA TU SEMANA</div><h2>Tu tiempo.<br><em>Tu ritmo.</em></h2></div><p>Una vista rápida de los horarios de ejemplo. La administración podrá mantener esta programación actualizada.</p></div>
+      <div class="schedule-wrap"><div class="schedule-top"><div><span class="schedule-dot"></span> HORARIO SEMANAL</div><span class="demo-label">DATOS DE DEMOSTRACIÓN</span></div><div class="schedule-table" id="scheduleTable"></div></div>
+    </section><section class="subpage-next"><p>GYMFlow · Gestión inteligente del gimnasio</p><a class="btn btn-primary" href="suscripciones.html">Ver suscripciones ↗</a></section></main><footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">G</span><span>GYM<span class="brand-light">FLOW</span><small>GESTIÓN INTELIGENTE</small></span></a><p>Proyecto académico · Arquitectura de Tecnologías de la Información</p><a href="#inicio">Volver arriba ↑</a></footer>
+
+  <div class="admin-overlay" id="adminOverlay" aria-hidden="true"><aside class="admin-panel"><div class="admin-header"><div><span class="eyebrow dark-eyebrow">ÁREA ADMINISTRATIVA</span><h2>Panel de control</h2><p>Vista demostrativa para administrar la información del gimnasio.</p></div><button class="close-admin" id="closeAdmin" aria-label="Cerrar panel">×</button></div><div class="admin-stats" id="adminStats"></div><div class="admin-tabs"><button class="admin-tab active" data-admin-tab="classes">Clases</button><button class="admin-tab" data-admin-tab="registrations">Inscripciones</button><button class="admin-tab" data-admin-tab="payments">Pagos</button></div><div id="adminContent"></div><div class="admin-warning">Demo local: los cambios se guardan en este navegador. No hay usuarios reales, servidor ni pagos conectados.</div></aside></div>
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button><div class="eyebrow dark-eyebrow"><span class="eyebrow-line"></span> GYMFLOW</div><h2 id="modalTitle">Únete al gimnasio</h2><p id="modalDescription">Completa los datos para registrar una solicitud de demostración.</p><form id="signupForm"><input type="hidden" id="selectedItem" name="selectedItem"><input type="hidden" id="selectedType" name="selectedType"><label>Nombre completo<input name="name" required minlength="2" placeholder="Ej. Alex Torres"></label><label>Correo electrónico<input name="email" type="email" required placeholder="alex@correo.com"></label><label>Teléfono (opcional)<input name="phone" type="tel" placeholder="999 999 999"></label><label id="classSelectLabel">Clase de interés<select name="className" id="classSelect"><option value="">Selecciona una clase</option></select></label><button class="btn btn-primary btn-large full-width" type="submit" id="formSubmit">Registrar solicitud <span>↗</span></button><p class="form-note">Demostración académica: no se procesarán datos ni pagos en un servidor.</p></form></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
